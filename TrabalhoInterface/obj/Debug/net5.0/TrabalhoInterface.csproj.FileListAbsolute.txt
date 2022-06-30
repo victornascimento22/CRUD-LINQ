@@ -1,0 +1,32 @@
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.exe
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.deps.json
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.runtimeconfig.json
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.runtimeconfig.dev.json
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.dll
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\bin\Debug\net5.0\ref\TrabalhoInterface.dll
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.pdb
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.AssemblyInfoInputs.cache
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.AssemblyInfo.cs
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.dll
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\obj\Debug\net5.0\ref\TrabalhoInterface.dll
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.pdb
+C:\Users\User\source\repos\TrabalhoInterface\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.genruntimeconfig.cache
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.exe
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.deps.json
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.runtimeconfig.json
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.runtimeconfig.dev.json
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.dll
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\bin\Debug\net5.0\ref\TrabalhoInterface.dll
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\bin\Debug\net5.0\TrabalhoInterface.pdb
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.csproj.AssemblyReference.cache
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.AssemblyInfoInputs.cache
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.AssemblyInfo.cs
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.csproj.CoreCompileInputs.cache
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.dll
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\obj\Debug\net5.0\ref\TrabalhoInterface.dll
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.pdb
+C:\Users\guest01\Desktop\Nova pasta\TrabalhoInterface\obj\Debug\net5.0\TrabalhoInterface.genruntimeconfig.cache
