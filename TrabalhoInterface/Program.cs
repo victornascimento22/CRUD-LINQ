@@ -6,9 +6,8 @@ namespace TrabalhoInterface
 {
     class Program
     {
-        static void Main(string[] args)
-        {
-            List<Caminhao> caminhao = new List<Caminhao> {
+
+        static List<Caminhao> caminhao = new List<Caminhao> {
 
             new Caminhao {Id = 1, Modelo = "Scania", Placa = "8528"},
             new Caminhao {Id = 2, Modelo = "Ford", Placa = "5825"},
@@ -16,7 +15,7 @@ namespace TrabalhoInterface
 
             };
 
-            List<Motorista> motorista = new List<Motorista> {
+        static List<Motorista> motorista = new List<Motorista> {
 
                 new Motorista {Id = 1, Nome = "Roberto", Endereco = "Quinto dos Infernos"},
                 new Motorista {Id = 2, Nome = "Joriscleide", Endereco = "Logo ali"},
@@ -24,12 +23,18 @@ namespace TrabalhoInterface
 
             };
 
-            List<Viagem> viagem = new List<Viagem>();
+        static List<Viagem> viagem = new List<Viagem>();
+
+
+
+        static void Main(string[] args)
+        {
+
 
             MenuPrincipal(caminhao, motorista, viagem);
         }
 
-        static void MenuPrincipal(List<Caminhao> caminhao, List<Motorista> motorista, List<Viagem> viagem)
+        public static void MenuPrincipal(List<Caminhao> caminhao, List<Motorista> motorista, List<Viagem> viagem)
         {
             int opcao;
 
@@ -64,6 +69,12 @@ namespace TrabalhoInterface
 
                             MenuRemover(caminhao, motorista, viagem);
 
+                        }
+                        break;
+                    case 4:
+                        {
+
+                            MenuListar(caminhao, motorista, viagem);
 
                         }
                         break;
@@ -220,6 +231,74 @@ namespace TrabalhoInterface
 
         }
 
+        static void MenuListar(List<Caminhao> caminhao, List<Motorista> motorista, List<Viagem> viagem)
+        {
+            int opcao;
+
+            do
+            {
+
+                Console.WriteLine("1 - Listar 2 - Remover Caminhao 3 - Remover Viagem 0 - Finalizar o programa");
+                Console.Write("Opcão : ");
+                opcao = Convert.ToInt32(Console.ReadLine());
+                Console.Clear();
+
+                switch (opcao)
+                {
+
+                    case 1:
+                        {
+
+                            ListarViagem( viagem);
+                       
+                        }
+                        break;
+
+                    case 2:
+                        {
+                            string nome = Console.ReadLine();
+                            ListarMotoristaPorNome(viagem, nome);
+
+                        }
+                        break;
+
+                    case 3:
+                        {
+                            string nome = Console.ReadLine();
+                            ListarCaminhaoPorMotorista(viagem, nome);
+
+                        }
+                        break;
+                    case 4:
+                        {
+                            string nome = Console.ReadLine();
+                            ListarMotoristaPorNome(viagem, nome);
+
+
+                        }
+                        break;
+                    case 5:
+                        {
+                            string nome = Console.ReadLine();
+                            ListarTodasAsViagensdeUmCaminhao(viagem, nome);
+
+
+
+                        }
+                        break;
+                    case 0:
+                        {
+
+                            Console.ReadKey();
+                            break;
+                        }
+                }
+
+            } while (opcao == 0);
+
+
+        }
+
         private static void CadastrarCaminhao(List<Caminhao> caminhao, List<Motorista> motorista, List<Viagem> viagem)
         {
 
@@ -235,10 +314,7 @@ namespace TrabalhoInterface
             caminhao.Add(novocaminhao);
 
             Console.WriteLine("Caminhao adicionado a lista com sucesso");
-            Console.WriteLine("Aperte qualquer tecla para continuar");
-            Console.ReadKey();
-            Console.Clear();
-            MenuCadastro(caminhao, motorista, viagem);
+
 
         }
 
@@ -257,10 +333,6 @@ namespace TrabalhoInterface
             motorista.Add(novomotorista);
 
             Console.WriteLine("Motorista adicionado a lista com sucesso");
-            Console.WriteLine("Aperte qualquer tecla para continuar");
-            Console.ReadKey();
-            Console.Clear();
-            MenuCadastro(caminhao, motorista, viagem);
 
         }
 
@@ -281,7 +353,7 @@ namespace TrabalhoInterface
 
             Viagem novaviagem = new Viagem { Id = id, Caminhao = caminhaoSelecionado, Motorista = motoristaSelecionado };
             viagem.Add(novaviagem);
-            MenuCadastro(caminhao, motorista, viagem);
+
 
         }
 
@@ -339,11 +411,8 @@ namespace TrabalhoInterface
                 string endereco = Console.ReadLine();
                 motoristaAtualizado.Endereco = endereco;
 
-                Console.WriteLine("Motorista atualizando com sucesso.");
-                Console.WriteLine("Aperte qualquer tecla para continuar");
-                Console.ReadKey();
-                Console.Clear();
-                MenuAtualizar(caminhao, motorista, viagem);
+                Console.WriteLine("Motorista atualizado com sucesso.");
+
 
             }
             else
@@ -352,7 +421,7 @@ namespace TrabalhoInterface
 
             }
 
-            MenuAtualizar(caminhao, motorista, viagem);
+
             return motoristaAtualizado;
         }
 
@@ -375,9 +444,7 @@ namespace TrabalhoInterface
                 caminhaoAtualizado.Placa = endereco;
 
                 Console.WriteLine("Caminhao atualizado com sucesso.");
-                Console.WriteLine("Aperte qualquer tecla para continuar");
-                Console.ReadKey();
-                Console.Clear();
+
 
             }
             else
@@ -385,7 +452,7 @@ namespace TrabalhoInterface
                 Console.WriteLine("Caminhão Inválido");
 
             }
-            MenuAtualizar(caminhao, motorista, viagem);
+
             return caminhaoAtualizado;
 
         }
@@ -409,17 +476,14 @@ namespace TrabalhoInterface
                 viagemAtualizada.Caminhao = BuscarCaminhao(caminhao);
 
                 Console.WriteLine("Viagem atualizado com sucesso.");
-                Console.WriteLine("Aperte qualquer tecla para continuar");
-                Console.ReadKey();
-                Console.Clear();
-                MenuAtualizar(caminhao, motorista, viagem);
+
                 return viagemAtualizada;
 
             }
             else
             {
                 Console.WriteLine("Viagem Inválida");
-                MenuAtualizar(caminhao, motorista, viagem);
+
                 return viagemAtualizada;
             }
 
@@ -432,7 +496,7 @@ namespace TrabalhoInterface
             int idAux = Convert.ToInt32(Console.ReadLine());
 
             var motoristaRemovido = motorista.RemoveAll(s => s.Id == idAux);
-            MenuRemover(caminhao, motorista, viagem);
+
 
         }
 
@@ -443,7 +507,7 @@ namespace TrabalhoInterface
             int idAux = Convert.ToInt32(Console.ReadLine());
 
             var caminhaoRemovido = caminhao.RemoveAll(s => s.Id == idAux);
-            MenuRemover(caminhao, motorista, viagem);
+
 
         }
 
@@ -453,32 +517,68 @@ namespace TrabalhoInterface
             int idAux = Convert.ToInt32(Console.ReadLine());
 
             var viagemRemovida = viagem.RemoveAll(s => s.Id == idAux);
-            MenuRemover(caminhao, motorista, viagem);
+
 
         }
+
+        public static List<Viagem> ListarViagem(List<Viagem> viagem)
+        {
+
+            var viagemEncontrado = from p in viagem
+                                   select p;
+
+            return viagemEncontrado.ToList();
+
+        }
+
+
+        public static List<Viagem> ListarMotoristaPorNome(List<Viagem> viagem, string nome)
+        {
+            
+            var viagemMotorista = viagem.Where(x => x.Motorista.Nome.Contains(nome));
+
+            return viagemMotorista.ToList();
+
+
+        }
+
+        public static List<Viagem> ListarCaminhaoPorModelo(List<Viagem> viagem, string nome)
+        {
+
+            var viagemMotorista = viagem.Where(x => x.Caminhao.Modelo.Contains(nome));
+
+            return viagemMotorista.ToList();
+
+
+        }
+        public static List<Caminhao> ListarCaminhaoPorMotorista(List<Viagem> viagem, string nome)
+        {
+
+            var viagemMotorista = viagem.Where(x =>  x.Motorista.Nome.Contains(nome)).Select(x => x.Caminhao);
+
+            return viagemMotorista.ToList();
+
+//            -Listar todos os caminhões que fizeram uma viagem com um
+//determinado motorista(usando o nome do motorista);
+
+        }
+
+        public static List<string> ListarTodasAsViagensdeUmCaminhao(List<Viagem> viagem, string nome)
+        {
+            var viagemMotorista = viagem.Where(x => x.Caminhao.Placa.Contains(placa) && x.Motorista.Nome.Contains(nome)).Select(x => x.Caminhao.Placa);
+
+            return viagemMotorista.ToList();
+
+
+
+
+        }
+
     }
 }
-//Tarefa para o fim de semana:
-//Faça um programa com as seguintes classes:
 
-//Caminhao
-//  Modelo: string;
-//Placa: string;
-//Id: int;
-
-//Motorista
-//  Nome: string;
-//Endereco: string;
-//Id: int;
-
-//Viagem
-//  Caminhao: Caminhao;
-//Motorista: Motorista;
-//Id: int;
-
-//Crie um cadastro de cada um, e permita fazer as seguintes operações:
-//Cadastrar;
-//Atualizar;
-//Remover.
-//No Programa principal, terá uma lista 
-//de cada classe e nelas serão feitas as operações usando LINQ (use para encontrar os elementos de acordo).
+//Listar todas as viagens de um caminhão em específico e 
+//um motorista específico (usando a placa do caminhão e o nome do motorista);
+//var query = from Student student in arrList
+//            where student.Scores[0] > 95
+//            select student;
